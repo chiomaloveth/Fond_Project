@@ -315,7 +315,7 @@ class TeamsScreen extends StatelessWidget {
                     const SizedBox(height: 8),
                     _buildProjectStats("completed", team.completedProjects),
                     const SizedBox(
-                        height: 20), // Space between Completed & Button
+                        height: 20), 
                   ],
                 ),
               ),
@@ -345,7 +345,7 @@ class TeamsScreen extends StatelessWidget {
                 'Manage Team',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 12), // Reduce font size if needed
+                    fontSize: 12), 
               ),
             ),
           ),

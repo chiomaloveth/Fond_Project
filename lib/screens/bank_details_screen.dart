@@ -191,7 +191,7 @@ class TeamManagementUI extends StatelessWidget {
             children: [
               // TextFormField for "Amount"
               Expanded(
-                flex: 3, // Give more space to the TextFormField
+                flex: 3, 
                 child: TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Amount....',
@@ -742,7 +742,7 @@ class BankDetailsForm extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
               shape: RoundedRectangleBorder(
                 borderRadius:
-                    BorderRadius.zero, // No border radius (sharp corners)
+                    BorderRadius.zero, 
               ),
             ),
             child: Text(
@@ -766,13 +766,13 @@ class BankDetailsForm extends StatelessWidget {
               backgroundColor: Colors.white,
               minimumSize: Size(double.infinity, 50),
               side: BorderSide(
-                color: Colors.black, // Border color
-                width: 2, // Border width
+                color: Colors.black, 
+                width: 2, 
               ),
               padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
               shape: RoundedRectangleBorder(
                 borderRadius:
-                    BorderRadius.zero, // No border radius (sharp corners)
+                    BorderRadius.zero, 
               ),
             ),
             child: Text(

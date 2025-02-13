@@ -104,12 +104,12 @@ class AddMemberScreen extends StatelessWidget {
           backgroundColor: Colors.white,
           minimumSize: Size(double.infinity, 50),
           side: BorderSide(
-            color: Colors.black, // Border color
-            width: 2, // Border width
+            color: Colors.black, 
+            width: 2, 
           ),
           padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.zero, // No border radius (sharp corners)
+            borderRadius: BorderRadius.zero, 
           ),
         ),
         child: Text(
@@ -165,7 +165,7 @@ class MemberCard extends StatelessWidget {
           const SizedBox(width: 12),
           // Member details
           Container(
-            width: 50, // Fixed width for member details
+            width: 50, 
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -194,7 +194,7 @@ class MemberCard extends StatelessWidget {
           ),
           const Spacer(),
           Container(
-            width: 180, // Adjust this value based on your needs
+            width: 180, 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -212,7 +212,7 @@ class MemberCard extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.grey.shade400,
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 8, vertical: 0), // Reduced padding
+                    horizontal: 8, vertical: 0), 
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6),
                 ),
@@ -222,7 +222,7 @@ class MemberCard extends StatelessWidget {
                 'Add',
                 style: TextStyle(
                   color: Color.fromRGBO(0, 82, 255, 1),
-                  fontSize: 12, // Smaller font size
+                  fontSize: 12, 
                 ),
               ),
             ),

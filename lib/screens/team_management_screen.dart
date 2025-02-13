@@ -159,7 +159,7 @@ class TeamManagementScreen extends StatelessWidget {
             children: [
               // TextFormField for "Amount"
               Expanded(
-                flex: 3, // Give more space to the TextFormField
+                flex: 3, 
                 child: TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Amount....',
@@ -264,7 +264,7 @@ class TeamManagementScreen extends StatelessWidget {
                     showModalBottomSheet(
                       context: context,
                       isScrollControlled:
-                          true, // Makes the sheet full height if needed
+                          true, 
                       backgroundColor: Colors.transparent,
                       builder: (context) => AddMemberScreen(),
                     );
