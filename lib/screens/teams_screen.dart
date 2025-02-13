@@ -198,10 +198,10 @@ class TeamsScreen extends StatelessWidget {
       child: GridView.builder(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // 2 items per row
-          crossAxisSpacing: 12, // Space between columns
-          mainAxisSpacing: 12, // Space between rows
-          childAspectRatio: 0.75, // Adjust card height
+          crossAxisCount: 2,
+          crossAxisSpacing: 12,
+          mainAxisSpacing: 12,
+          childAspectRatio: 0.75,
         ),
         itemCount: provider.teams.length,
         itemBuilder: (context, index) {
@@ -216,8 +216,9 @@ class TeamsScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFF1A1F37),
-        borderRadius: BorderRadius.circular(30), // Rounded corners
+        //color: const Color(0xFF1A1F37),
+        borderRadius: BorderRadius.circular(30),
+        border: Border.all(width: 1, color: Colors.grey),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -305,7 +306,7 @@ class TeamsScreen extends StatelessWidget {
                 progressColor: Colors.blue,
                 backgroundColor: Colors.grey.shade800,
               ),
-              const SizedBox(width: 15), // Spacing between elements
+              const SizedBox(width: 11), // Spacing between elements
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -380,7 +381,7 @@ class TeamsScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: const BoxDecoration(
-        color: Color(0xFF1A1F37),
+        color: Color(0xFF0A0E1F),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
@@ -389,9 +390,9 @@ class TeamsScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildNavBarItem(Icons.home, true),
+          _buildNavBarItem(Icons.home, false),
           _buildNavBarItem(Icons.search, false),
-          _buildNavBarItem(Icons.people, false),
+          _buildNavBarItem(Icons.people, true),
           _buildNavBarItem(Icons.person, false),
         ],
       ),
@@ -401,7 +402,7 @@ class TeamsScreen extends StatelessWidget {
   Widget _buildNavBarItem(IconData icon, bool isSelected) {
     return Icon(
       icon,
-      color: isSelected ? Colors.blue : Colors.grey,
+      color: isSelected ? Colors.white : Color.fromRGBO(0, 82, 255, 1),
       size: 28,
     );
   }
