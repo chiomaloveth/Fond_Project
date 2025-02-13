@@ -3,6 +3,7 @@ import 'package:found_team_assessment/models/details.dart';
 import 'package:found_team_assessment/models/team_member.dart';
 import 'package:found_team_assessment/providers/details_screen_provider.dart';
 import 'package:found_team_assessment/screens/add_member_screen.dart';
+import 'package:found_team_assessment/screens/teams_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:found_team_assessment/providers/screen_provider.dart';
 
@@ -73,7 +74,12 @@ class TeamManagementUI extends StatelessWidget {
           IconButton(
               icon: const Icon(Icons.arrow_back, color: Colors.white),
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TeamsScreen(),
+                  ),
+                );
               }),
           const Text(
             'Team Management',
@@ -191,7 +197,7 @@ class TeamManagementUI extends StatelessWidget {
             children: [
               // TextFormField for "Amount"
               Expanded(
-                flex: 3, 
+                flex: 3,
                 child: TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Amount....',
@@ -741,8 +747,7 @@ class BankDetailsForm extends StatelessWidget {
               ),
               padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
               shape: RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.zero, 
+                borderRadius: BorderRadius.zero,
               ),
             ),
             child: Text(
@@ -766,13 +771,12 @@ class BankDetailsForm extends StatelessWidget {
               backgroundColor: Colors.white,
               minimumSize: Size(double.infinity, 50),
               side: BorderSide(
-                color: Colors.black, 
-                width: 2, 
+                color: Colors.black,
+                width: 2,
               ),
               padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
               shape: RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.zero, 
+                borderRadius: BorderRadius.zero,
               ),
             ),
             child: Text(

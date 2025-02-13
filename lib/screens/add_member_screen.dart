@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:found_team_assessment/models/member.dart';
 import 'package:found_team_assessment/providers/memeber_provider.dart';
+import 'package:found_team_assessment/screens/team_management_screen.dart';
 import 'package:provider/provider.dart';
 
 class AddMemberScreen extends StatelessWidget {
@@ -49,7 +50,12 @@ class AddMemberScreen extends StatelessWidget {
         IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => TeamManagementScreen(),
+              ),
+            );
           },
         ),
       ],
@@ -98,18 +104,23 @@ class AddMemberScreen extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16),
       child: TextButton(
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => TeamManagementScreen(),
+            ),
+          );
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
           minimumSize: Size(double.infinity, 50),
           side: BorderSide(
-            color: Colors.black, 
-            width: 2, 
+            color: Colors.black,
+            width: 2,
           ),
           padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.zero, 
+            borderRadius: BorderRadius.zero,
           ),
         ),
         child: Text(
@@ -165,7 +176,7 @@ class MemberCard extends StatelessWidget {
           const SizedBox(width: 12),
           // Member details
           Container(
-            width: 50, 
+            width: 50,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -194,7 +205,7 @@ class MemberCard extends StatelessWidget {
           ),
           const Spacer(),
           Container(
-            width: 180, 
+            width: 180,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -211,8 +222,7 @@ class MemberCard extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.grey.shade400,
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 8, vertical: 0), 
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6),
                 ),
@@ -222,7 +232,7 @@ class MemberCard extends StatelessWidget {
                 'Add',
                 style: TextStyle(
                   color: Color.fromRGBO(0, 82, 255, 1),
-                  fontSize: 12, 
+                  fontSize: 12,
                 ),
               ),
             ),
